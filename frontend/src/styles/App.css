@@ -1,0 +1,186 @@
+/* ==========================================================================
+   App & Section Layout Styles
+   ========================================================================== */
+
+/* Main App Shell Container */
+.app-shell {
+  min-height: 100vh;
+  background: #0f172a;
+  background: radial-gradient(ellipse 80% 80% at 50% -20%, rgba(6, 78, 59, 0.5), rgba(15, 23, 42, 1));
+  color: #1e293b;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Page Layout Section Container (Sidebar + Chat Area Stacked / Grid) */
+.app-main-layout {
+  flex: 1;
+  max-width: 72rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .app-main-layout {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+}
+
+/* Sidebar Section Stack */
+.app-sidebar-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  flex-shrink: 0;
+}
+
+@media (min-width: 1024px) {
+  .app-sidebar-section {
+    width: 20rem;
+  }
+}
+
+/* Dashboard Weather Card Section */
+.app-widget-card {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 1.25rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  box-shadow: 0 10px 25px -5px rgba(4, 120, 87, 0.12);
+  position: relative;
+  overflow: hidden;
+}
+
+.app-widget-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.app-widget-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #065f46;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.app-stat-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.65rem 0.75rem;
+  border-radius: 0.75rem;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(209, 250, 229, 0.8);
+}
+
+.app-stat-label {
+  font-size: 0.75rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.app-stat-val {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #022c22;
+}
+
+/* Smart Advisory Section Clickable Buttons */
+.app-nav-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0.85rem;
+  border-radius: 0.75rem;
+  text-align: left;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 0.25 cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.85);
+  color: #064e3b;
+  box-shadow: 0 2px 6px rgba(4, 120, 87, 0.05);
+}
+
+.app-nav-item:hover:not(:disabled) {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  color: #ffffff;
+  border-color: #059669;
+  box-shadow: 0 6px 16px rgba(5, 150, 105, 0.25);
+  transform: translateY(-2px);
+}
+
+.app-nav-item:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.app-nav-item:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.app-nav-arrow {
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: transform 0.2s ease;
+  opacity: 0.7;
+}
+
+.app-nav-item:hover .app-nav-arrow {
+  transform: translateX(4px);
+  opacity: 1;
+  color: #ffffff;
+}
+
+/* Pro Tip Card Section */
+.app-protip-card {
+  padding: 1rem;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, #064e3b 0%, #0f766e 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(6, 78, 59, 0.3);
+  border: 1px solid rgba(52, 211, 153, 0.3);
+}
+
+/* Main Chat Section Container */
+.app-chat-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 1.5rem;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  box-shadow: 0 20px 40px -15px rgba(2, 44, 34, 0.3);
+  padding: 1.25rem;
+  min-height: 580px;
+}
+
+/* Footer Section */
+.app-footer {
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 0.75rem;
+  color: rgba(209, 250, 229, 0.7);
+  border-top: 1px solid rgba(6, 78, 59, 0.4);
+  background: rgba(2, 44, 34, 0.6);
+  backdrop-filter: blur(8px);
+}

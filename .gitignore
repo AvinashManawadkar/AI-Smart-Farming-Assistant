@@ -1,0 +1,13 @@
+# Python
+**/__pycache__/
+**/*.py[cod]
+backend/venv/
+backend/.venv/
+
+# Secrets
+**/.env
+!**/.env.example
+
+# Node
+frontend/node_modules/
+frontend/dist/
